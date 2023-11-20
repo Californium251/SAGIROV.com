@@ -1,0 +1,138 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+    background-color: rgba(19, 9, 0, 0.5);
+    border-bottom: 1px solid #2B2B2C;
+}
+
+.header__container {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+}
+
+
+.header__logo-wrapper {
+    flex: 1;
+    flex-basis: 320px;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid #2B2B2C;
+}
+
+.header__logo::before,
+.header__logo::after,
+.header__logo-wrapper::before,
+.header__logo-wrapper::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+}
+
+.header__logo::before {
+    top: 0;
+    left: 0;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.header__logo::after {
+    top: 0;
+    right: 0;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.header__logo-wrapper::before {
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+}
+
+.header__logo-wrapper::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.header__link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.header__link:hover {
+    color: #857D82;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+@media screen and (max-width: 1280px) {
+    .header {
+        height: 70px;
+    }
+
+    .header__container {
+        width: 1000px;
+    }
+
+    .header__logo-wrapper {
+        flex-basis: 250px;
+    }
+
+    .header__logo>img {
+        width: 220px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 40px;
+    }
+
+    .header__container {
+        width: 750px;
+    }
+
+    .header__logo>img {
+        scale: 0.5;
+    }
+
+    .header__logo-wrapper {
+        flex-basis: 180px;
+        flex-grow: 0;
+        padding-left: 0px;
+        width: 200px;
+    }
+
+    .header__link {
+        padding: 0px 8px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heade__container {
+        width: 750px;
+    }
+}

@@ -1,0 +1,13 @@
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 8px;
+    padding-bottom: 170px;
+}
+
+@media screen and (max-width: 768px) {
+    .features {
+        padding-bottom: 0;
+    }
+}

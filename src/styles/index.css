@@ -1,0 +1,22 @@
+body {
+    overflow: hidden;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    min-height: 794px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/public/images/background.jpg');
+    background-position: top;
+}
+
+@media screen and (max-width: 768px) {
+    .page {
+        min-height: 0;
+        justify-content: start;
+    }
+}
