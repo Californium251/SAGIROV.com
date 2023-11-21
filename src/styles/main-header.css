@@ -6,7 +6,7 @@
 .main-header {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     color: #fff;
     margin-bottom: auto;
 }

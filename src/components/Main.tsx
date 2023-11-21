@@ -6,7 +6,6 @@ import '../styles/main-header.css';
 
 const Main = () => {
     const isNarrowScreen = useMediaQuery('(max-width: 768px)');
-    console.log(isNarrowScreen);
     if (!isNarrowScreen) {
         return <div className='main'>
             <div className='main-header'>
