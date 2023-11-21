@@ -47,9 +47,8 @@ INSTALLED_APPS = [
     'main',
 ]
 
-cors_origins = env('CORS_ALLOWED_ORIGINS', default='')
-CORS_ALLOWED_ORIGINS = [env('CORS_ALLOWED_ORIGINS'), 'https://sagirovcom-production.up.railway.app/']
-CORS_ORIGIN_WHITELIST= [env('CORS_ALLOWED_ORIGINS'), 'https://sagirovcom-production.up.railway.app/']
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

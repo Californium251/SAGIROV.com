@@ -5,13 +5,13 @@ import Navigation from './Navigation.tsx';
 
 const Header = () => {
     const [menuItems, setMenuItems] = useState<Array<string>>([]);
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const res = await axios.get(`https://foolish-price-production.up.railway.app/api/1`);
-    //         setMenuItems(JSON.parse(res.data.menu));
-    //     }
-    //     fetchData();
-    // }, []);
+    useEffect(() => {
+        const fetchData = async () => {
+            const res = await axios.get(`https://foolish-price-production.up.railway.app/api/1`);
+            setMenuItems(JSON.parse(res.data.menu));
+        }
+        fetchData();
+    }, []);
     return (
         <header className='header'>
             <div className='header__container'>
