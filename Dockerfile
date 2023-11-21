@@ -1,7 +1,16 @@
-FROM python:3.9.6
-WORKDIR /code
-COPY backend/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY backend/ .
-ENV PORT=8000
-CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Используйте подходящий базовый образ, например, Node
+FROM node:latest
+
+# Установите рабочую директорию
+WORKDIR /app
+
+# Копируйте файлы проекта
+COPY package.json .
+COPY src/ ./src
+
+# Установите зависимости и выполните сборку
+RUN npm install
+RUN npm run build
+
+# Используйте сервер для раздачи статических файлов, например, serve
+CMD ["serve", "-s", "build"]
