@@ -6,10 +6,14 @@ WORKDIR /app
 
 # Копируйте файлы проекта
 COPY package.json .
-COPY src/ ./src
+COPY public/ public/
+COPY src/ src/
+
 
 # Установите зависимости и выполните сборку
+RUN NODE_ENV=development npm i
 RUN npm install
+RUN npm install -g serve
 RUN npm run build
 
 # Используйте сервер для раздачи статических файлов, например, serve
