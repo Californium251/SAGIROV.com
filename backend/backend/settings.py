@@ -30,6 +30,9 @@ SECRET_KEY = 'django-insecure-hix#8u06o4%!(l4126c*klyrmch-hqw+ir$-$se!s&e)j=&42*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = False
+
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['*']
 
@@ -46,9 +49,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'main',
 ]
-
-
-CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
