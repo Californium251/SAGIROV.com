@@ -1,7 +1,7 @@
 FROM python:3.9.6
 WORKDIR /code
 COPY requirements.txt .
-RUN pip install gunicorn && gunicorn far-friction:far-friction
+RUN pip install gunicorn && gunicorn foolish-price:foolish-price
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 ENV PORT=8000
