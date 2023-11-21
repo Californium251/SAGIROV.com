@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 ]
 
 cors_origins = env('CORS_ALLOWED_ORIGINS', default='')
-CORS_ALLOWED_ORIGINS = cors_origins.split(',') if cors_origins else []
+CORS_ALLOWED_ORIGINS = [env('CORS_ALLOWED_ORIGINS'), 'https://sagirovcom-production.up.railway.app/']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
