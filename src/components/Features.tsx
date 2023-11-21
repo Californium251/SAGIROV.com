@@ -7,7 +7,7 @@ const Features = () => {
     const [features, setFeatures] = useState<Array<{ firstLine: string, number: string, secondLine: string }>>([]);
     useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get('http://127.0.0.1:8000/api/1');
+            const res = await axios.get('sagirov-com.railway.internal');
             setFeatures(JSON.parse(res.data.body));
         }
         fetchData();
