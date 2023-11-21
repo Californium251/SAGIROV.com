@@ -34,7 +34,9 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = False
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['*']
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000', 'https://foolish-price-production.up.railway.app']
+CORS_ORIGIN_WHITELIST = ( 'http://localhost:3000', 'https://foolish-price-production.up.railway.app')
+# CSRF_TRUSTED_ORIGINS = ['*']
 
 # Application definition
 
@@ -51,9 +53,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
