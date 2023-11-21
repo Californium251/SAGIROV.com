@@ -7,8 +7,8 @@ const Header = () => {
     const [menuItems, setMenuItems] = useState<Array<string>>([]);
     useEffect(() => {
         const fetchData = async () => {
-            console.log(`${process.env.REACT_APP_API_URL}/api/1`);
-            const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/1`);
+            console.log(`https://foolish-price-production.up.railway.app/api/1`);
+            const res = await axios.get(`https://foolish-price-production.up.railway.app/api/1`);
             setMenuItems(JSON.parse(res.data.menu));
         }
         fetchData();
