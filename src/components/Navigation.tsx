@@ -15,7 +15,7 @@ const Navigation: FC<PropsWithChildren<{ className: string }>> = ({ children, cl
                 border: 'none',
                 backgroundColor: 'transparent',
             }}>
-                <img src='/public/images/menu-button.svg' alt='menu' width='20px' height='20px' />
+                <img src='/images/menu-button.svg' alt='menu' width='20px' height='20px' />
             </button>
             <Drawer
                 anchor='right'
