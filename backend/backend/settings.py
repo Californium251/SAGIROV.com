@@ -26,6 +26,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-hix#8u06o4%!(l4126c*klyrmch-hqw+ir$-$se!s&e)j=&42*'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': { # Log to stdout
+            'class': 'logging.StreamHandler',
+        },
+    },
+}
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
