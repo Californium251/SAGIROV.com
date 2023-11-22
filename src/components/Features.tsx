@@ -7,7 +7,7 @@ const Features = () => {
     const [features, setFeatures] = useState<Array<{ firstLine: string, number: string, secondLine: string }>>([]);
     useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get('https://foolish-price-production.up.railway.app/api/1', {
+            const res = await axios.get('https://foolish-price-production.up.railway.app/api/1/', {
                 headers: {
                     'Content-Type': 'application/json',
                 }
