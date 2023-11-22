@@ -7,7 +7,11 @@ const Header = () => {
     const [menuItems, setMenuItems] = useState<Array<string>>([]);
     useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get(`https://foolish-price-production.up.railway.app/api/1`);
+            const res = await axios.get(`https://foolish-price-production.up.railway.app/api/1`, {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
             setMenuItems(JSON.parse(res.data.menu));
         }
         fetchData();
