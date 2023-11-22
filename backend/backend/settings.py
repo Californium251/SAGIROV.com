@@ -37,7 +37,7 @@ LOGGING = {
 }
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 cors_allowed_origins = os.environ.get('CORS_ALLOWED_ORIGINS')
 ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = cors_allowed_origins.split(',') if cors_allowed_origins else ['http://localhost:3000', 'https://sagirovcom-production.up.railway.app']
