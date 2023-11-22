@@ -39,10 +39,11 @@ LOGGING = {
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 cors_allowed_origins = os.environ.get('CORS_ALLOWED_ORIGINS')
+csrf_trusted_origins = os.environ.get('CSRF_TRUSTED_ORIGINS')
 ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = cors_allowed_origins.split(',') if cors_allowed_origins else ['http://localhost:3000', 'https://sagirovcom-production.up.railway.app']
 COMPRESS_ALLOW_ALL_ORIGINS = True
-CSRF_TRUSTED_ORIGINS = cors_allowed_origins.split(',') if cors_allowed_origins else ['http://localhost:3000', 'https://sagirovcom-production.up.railway.app', 'https://foolish-price-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = csrf_trusted_origins.split(',') if cors_allowed_origins else ['http://localhost:3000', 'https://sagirovcom-production.up.railway.app', 'https://foolish-price-production.up.railway.app']
 
 # Application definition
 
