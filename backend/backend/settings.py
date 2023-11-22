@@ -31,8 +31,8 @@ SECRET_KEY = 'django-insecure-hix#8u06o4%!(l4126c*klyrmch-hqw+ir$-$se!s&e)j=&42*
 # DEBUG = True
 cors_allowed_origins = os.environ.get('CORS_ALLOWED_ORIGINS')
 ALLOWED_HOSTS = ['*']
-CORS_ALLOWED_ORIGINS = ['http://localhost:3000', 'https://sagirovcom-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'https://sagirovcom-production.up.railway.app']
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000', 'https://sagirovcom-production.up.railway.app', cors_allowed_origins]
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'https://sagirovcom-production.up.railway.app', cors_allowed_origins]
 
 # Application definition
 
